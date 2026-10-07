@@ -17,11 +17,11 @@
 | 今日達標所需 | Goal / 當月天數 × 已過天數 − MTD |
 
 ## 網站與部署
-- 網址：https://karzeworks.github.io/ （repo `karzeworks/karzeworks.github.io`，`main` 分支根目錄）
+- 網址：https://karzeworks.github.io/wg-calculator/ （repo `karzeworks/wg-calculator`，`main` 分支根目錄）
 - 推送到 `main` 後 GitHub Pages 會自動重新部署。
 
 ## 廣告（Google AdSense）
-- 每頁 `<head>` 已放 AdSense 驗證碼，根目錄有 `ads.txt`。
+- 每頁 `<head>` 已放 AdSense 驗證碼；`ads.txt` 與隱私權政策位於網域根目錄，由 `karzeworks/karzeworks.github.io` repo 管理。
 - 廣告版位只在周邊空白處：寬螢幕左右兩側 160×600、窄螢幕計算結果下方 300×250。
 - 審核通過後到 AdSense「廣告 → 依廣告單元」建立固定尺寸的多媒體廣告，把 `data-ad-slot` 填進 `ads.js` 的 `AD_SLOTS`；不要開啟「自動廣告」，以免出現插頁或浮動廣告。
 

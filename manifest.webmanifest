@@ -1,6 +1,6 @@
 {
-  "name": "WG小工具",
-  "short_name": "WG小工具",
+  "name": "WG計算機",
+  "short_name": "WG計算機",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

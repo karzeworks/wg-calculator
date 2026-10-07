@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#ef4135">
   <meta name="description" content="WG 業績計算工具：依 MTD 與目標業績計算 PROJ、達成率、每日目標與今日達標所需。">
-  <title>WG小工具</title>
+  <title>WG計算機</title>
   <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -15,7 +15,7 @@
 <body>
   <header class="top">
     <img src="icons/icon-192.png" alt="" class="logo" width="36" height="36">
-    <h1>WG小工具</h1>
+    <h1>WG計算機</h1>
     <button type="button" id="menuBtn" class="menu-btn" aria-haspopup="dialog" aria-controls="formulaDialog">公式</button>
   </header>
 
@@ -60,7 +60,10 @@
       </div>
 
       <p id="error" class="error" role="alert" hidden></p>
-      <button type="submit" class="primary">計算</button>
+      <div class="form-actions">
+        <button type="button" id="clearBtn" class="ghost">清除</button>
+        <button type="submit" class="primary">計算</button>
+      </div>
     </form>
 
     <section class="card results" aria-live="polite">
@@ -79,7 +82,7 @@
   </div>
 
   <footer>
-    <nav><a href="about.html">使用說明</a> · <a href="/privacy.html">隱私權政策</a></nav>
+    <nav><a href="/">首頁</a> · <a href="about.html">使用說明</a> · <a href="/privacy.html">隱私權政策</a></nav>
     <p>© KarzeWorks</p>
   </footer>
 
@@ -90,10 +93,10 @@
       <dt>MTD</dt><dd>當月合計業績</dd>
       <dt>Goal</dt><dd>當月目標業績</dd>
       <dt>PT(MTD)</dt><dd>當月累計完課數</dd>
-      <dt>PROJ</dt><dd>當月預計達成業績<br><code>= MTD / 已過天數 × 當月天數</code></dd>
-      <dt>%</dt><dd>當月預計達成率<br><code>= PROJ / Goal</code></dd>
-      <dt>DailyNeed</dt><dd>當前每日目標<br><code>= (目標業績 − MTD) / 剩餘天數</code></dd>
-      <dt>今日達標所需</dt><dd>今日達到 100% 所需的數字<br><code>= 目標 / 當月天數 × 已過天數 − MTD</code></dd>
+      <dt>PROJ</dt><dd>當月預計達成業績<pre><code>MTD ÷ 已過天數 × 當月天數</code></pre></dd>
+      <dt>%</dt><dd>當月預計達成率<pre><code>PROJ ÷ Goal</code></pre></dd>
+      <dt>DailyNeed</dt><dd>當前每日目標<pre><code>(Goal − MTD) ÷ 剩餘天數</code></pre></dd>
+      <dt>今日達標所需</dt><dd>今日達到 100% 所需的數字<pre><code>Goal ÷ 當月天數 × 已過天數 − MTD</code></pre></dd>
     </dl>
     <form method="dialog"><button class="primary">關閉</button></form>
   </dialog>

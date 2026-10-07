@@ -1,4 +1,4 @@
-# WG小工具（網頁版）
+# WG計算機（網頁版）
 
 由 Unity 版 `WGPerformanceCalculator` 移植的純靜態網頁，可直接以 GitHub Pages 免費架設。
 

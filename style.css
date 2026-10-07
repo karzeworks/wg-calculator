@@ -134,6 +134,10 @@ button { font: inherit; cursor: pointer; }
 
 .error { color: var(--error); margin: 0 0 12px; }
 
+.form-actions { display: flex; gap: 8px; }
+.form-actions .ghost { flex: 0 0 30%; font-size: 1.05rem; font-weight: 600; }
+.form-actions .primary { flex: 1; }
+
 .results h2 { margin: 0 0 8px; font-size: 1.1rem; }
 .results dl { margin: 0; }
 .results dl > div {
@@ -193,5 +197,13 @@ dialog::backdrop { background: rgba(0, 0, 0, .45); }
 dialog h2 { margin: 0 0 8px; }
 .formula dt { font-weight: 700; margin-top: 10px; }
 .formula dd { margin: 2px 0 0; color: var(--muted); }
-.formula code { color: var(--text); font-size: .9rem; }
+.formula pre {
+  margin: 6px 0 0;
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  white-space: pre-wrap;
+}
+.formula pre code { color: var(--text); font-size: .95rem; font-family: ui-monospace, "Cascadia Mono", Consolas, "Noto Sans TC", monospace; }
 dialog form { margin-top: 16px; }

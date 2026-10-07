@@ -91,6 +91,17 @@
     goalSelect.value = "";
   });
 
+  $("clearBtn").addEventListener("click", () => {
+    dateInput.value = todayString();
+    goalSelect.value = "";
+    for (const [key, input] of Object.entries(STORAGE)) {
+      input.value = "";
+      try { localStorage.removeItem(key); } catch { /* ignore */ }
+    }
+    for (const el of Object.values(out)) el.textContent = "未計算";
+    showError("");
+  });
+
   $("calcForm").addEventListener("submit", (e) => {
     e.preventDefault();
     calculate();

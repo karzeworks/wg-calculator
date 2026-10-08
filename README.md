@@ -25,6 +25,10 @@
 - 廣告版位只在周邊空白處：寬螢幕左右兩側 160×600、窄螢幕計算結果下方 300×250。
 - 審核通過後到 AdSense「廣告 → 依廣告單元」建立固定尺寸的多媒體廣告，把 `data-ad-slot` 填進 `ads.js` 的 `AD_SLOTS`；不要開啟「自動廣告」，以免出現插頁或浮動廣告。
 
+## 流量分析（Google Analytics 4）
+- 評估 ID `G-D3XS6CVH6Z`（資源 KarzeWorks，串流 `https://karzeworks.github.io`，涵蓋首頁與所有子專案）。
+- 追蹤碼緊接在每頁 `<head>` 之後；隱私權政策已說明 GA 的使用與停用方式。
+
 ## 本機預覽
 ```bash
 python -m http.server 5173

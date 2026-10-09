@@ -165,6 +165,19 @@ footer {
 footer p { margin: 4px 0 0; }
 a { color: var(--brand); }
 
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .18);
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.back-btn:active { background: rgba(255, 255, 255, .3); }
+
 .home {
   display: flex;
   align-items: center;
@@ -185,6 +198,15 @@ a { color: var(--brand); }
 .article-list { padding-left: 1.2em; }
 .article-list li { margin: .6em 0; }
 .article-list p { margin: .2em 0 0; color: var(--muted); }
+.prose pre {
+  margin: .6em 0;
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  white-space: pre-wrap;
+}
+.prose pre code { font-size: .95rem; font-family: ui-monospace, "Cascadia Mono", Consolas, "Noto Sans TC", monospace; }
 .prose table { border-collapse: collapse; width: 100%; margin: .8em 0; font-size: .95rem; }
 .prose th, .prose td { border: 1px solid var(--border); padding: 6px 8px; text-align: left; }
 .prose h2 { margin-top: 0; }

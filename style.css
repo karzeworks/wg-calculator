@@ -10,8 +10,9 @@
   color-scheme: light dark;
 }
 
+/* 外觀：預設跟隨系統；使用者在切換鈕選過就以 data-theme 為準 */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #161414;
     --card: #221f1f;
     --text: #f3efee;
@@ -20,6 +21,16 @@
     --error: #ff8a80;
   }
 }
+:root[data-theme="dark"] {
+  --bg: #161414;
+  --card: #221f1f;
+  --text: #f3efee;
+  --muted: #a8a19f;
+  --border: #3a3534;
+  --error: #ff8a80;
+  color-scheme: dark;
+}
+:root[data-theme="light"] { color-scheme: light; }
 
 * { box-sizing: border-box; }
 
@@ -236,3 +247,24 @@ dialog h2 { margin: 0 0 8px; }
 }
 .formula pre code { color: var(--text); font-size: .95rem; font-family: ui-monospace, "Cascadia Mono", Consolas, "Noto Sans TC", monospace; }
 dialog form { margin-top: 16px; }
+
+/* 外觀切換鈕（/theme.js 填入圖示與文字；腳本未載入時隱藏） */
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 12px;
+  margin-left: auto;
+  border: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .18);
+  color: #fff;
+  font: inherit;
+  font-size: .9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.theme-btn:active { background: rgba(255, 255, 255, .3); }
+.theme-btn svg { width: 18px; height: 18px; }
+.theme-btn:empty { display: none; }

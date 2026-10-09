@@ -7,6 +7,7 @@
 - 計算 PROJ、達成率 %、DailyNeed、今日達標所需
 - LTD / MTD / Goal 自動保存在瀏覽器（localStorage）
 - 右上「公式」顯示計算公式
+- 業績指南：`guides.html` 與三篇文章（每日目標拆解、達成率與 PROJ、落後追趕計畫）
 
 ## 公式
 | 項目 | 公式 |
@@ -21,7 +22,7 @@
 - 推送到 `main` 後 GitHub Pages 會自動重新部署。
 
 ## 廣告（Google AdSense）
-- 每頁 `<head>` 已放 AdSense 驗證碼；`ads.txt` 與隱私權政策位於網域根目錄，由 `karzeworks/karzeworks.github.io` repo 管理。
+- 只有內容頁（計算機、使用說明、業績指南）放 AdSense 程式碼；網域根目錄的導覽頁與隱私權政策不放。`ads.txt` 與隱私權政策位於網域根目錄，由 `karzeworks/karzeworks.github.io` repo 管理。
 - 廣告版位只在周邊空白處：寬螢幕左右兩側 160×600、窄螢幕計算結果下方 300×250。
 - 審核通過後到 AdSense「廣告 → 依廣告單元」建立固定尺寸的多媒體廣告，把 `data-ad-slot` 填進 `ads.js` 的 `AD_SLOTS`；不要開啟「自動廣告」，以免出現插頁或浮動廣告。
 

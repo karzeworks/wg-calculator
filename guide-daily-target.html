@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3XS6CVH6Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D3XS6CVH6Z');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ef4135">
+  <meta name="description" content="月業績目標怎麼拆成每天的數字？比較平均分配與依進度修正兩種做法，附 DailyNeed 計算範例與工作天換算。">
+  <title>把月目標拆成每日目標 - WG計算機</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7288600499250923" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="top">
+    <a href="./" class="home"><img src="icons/icon-192.png" alt="" class="logo" width="36" height="36"><h1>WG計算機</h1></a>
+  </header>
+
+  <main class="page">
+    <article class="card prose">
+      <h2>把月目標拆成每日目標</h2>
+      <p>一個月的目標動輒十幾萬，直接看總數很難知道「今天該做到多少」。把月目標拆成每日目標，能讓每天的工作有明確的及格線，也能更早發現進度落後。拆法主要有兩種，各有適合的時機。</p>
+
+      <h3>做法一：平均分配</h3>
+      <p>最直覺的方法是把目標除以當月天數：</p>
+      <pre><code>每日平均 = Goal ÷ 當月天數</code></pre>
+      <p>例如 7 月有 31 天、目標 110,000，每天平均約 <strong>3,548</strong>。這個數字在月初最有用：它告訴你「照理想節奏，每天要做到多少」。WG計算機的「今日達標所需」就是以這個理想節奏為基準，算出到今天為止還差多少。</p>
+      <p>平均分配的缺點是它不會隨實際進度調整。月初如果做得比較少，後面每天其實要做得比 3,548 更多，才能把缺口補回來。</p>
+
+      <h3>做法二：依進度修正（DailyNeed）</h3>
+      <p>比較實用的做法，是每天用「還差多少」除以「還剩幾天」：</p>
+      <pre><code>DailyNeed = (Goal − MTD) ÷ 剩餘天數</code></pre>
+      <p>延續上面的例子，到 7 月 10 日 MTD 是 30,000，剩下 21 天，DailyNeed 就是 (110,000 − 30,000) ÷ 21 ≈ <strong>3,810</strong>。比平均值 3,548 高了約 260，這就是月初進度稍慢要付出的代價。</p>
+      <p>DailyNeed 的好處是它會自動校正：今天做得比 DailyNeed 多，明天的數字就會下降；做得少，明天就會上升。只要每天更新 MTD 再算一次，就能一直拿到「從今天起每天要做多少」的答案。</p>
+
+      <h3>週末不上班時怎麼換算</h3>
+      <p>WG計算機以日曆天計算剩餘天數。如果週末或假日不工作，可以把剩下的總業績改除以剩餘的工作天：</p>
+      <pre><code>每個工作天 = DailyNeed × 剩餘天數 ÷ 剩餘工作天</code></pre>
+      <p>以 7 月 10 日為例，剩下的 21 天中若只有 15 個工作天，每個工作天要做到 80,000 ÷ 15 ≈ <strong>5,333</strong>。這個數字比 DailyNeed 高很多，也更貼近實際每天要面對的壓力。</p>
+
+      <h3>兩種數字怎麼搭配</h3>
+      <table>
+        <thead><tr><th>數字</th><th>回答的問題</th><th>適合用在</th></tr></thead>
+        <tbody>
+          <tr><td>每日平均</td><td>理想節奏每天該做多少</td><td>月初訂計畫</td></tr>
+          <tr><td>今日達標所需</td><td>和理想節奏相比，今天還差多少</td><td>每天檢查是否在軌道上</td></tr>
+          <tr><td>DailyNeed</td><td>從今天起每天要做多少才能達標</td><td>月中以後調整步調</td></tr>
+        </tbody>
+      </table>
+      <p>簡單的習慣是：每天下班前更新一次 MTD，先看「今日達標所需」確認今天有沒有跟上，再看 DailyNeed 決定明天的目標。</p>
+
+      <h3>月底最後一天</h3>
+      <p>月底最後一天已經沒有「剩餘天數」，DailyNeed 無法再平均分配，WG計算機會顯示「月底已到」。這時直接看 Goal 減 MTD，就是今天要補足的全部差額。</p>
+
+      <p><a href="./">→ 用 WG計算機算算看</a> · <a href="guides.html">回到業績指南</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <nav><a href="/">首頁</a> · <a href="about.html">使用說明</a> · <a href="guides.html">業績指南</a> · <a href="/privacy.html">隱私權政策</a></nav>
+    <p>© KarzeWorks</p>
+  </footer>
+</body>
+</html>

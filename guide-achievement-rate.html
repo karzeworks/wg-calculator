@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3XS6CVH6Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D3XS6CVH6Z');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ef4135">
+  <meta name="description" content="PROJ 與達成率是怎麼算的？為什麼月初的預估特別不準？用實例說明線性推估的誤差來源與正確解讀方式。">
+  <title>達成率與 PROJ：月底預估怎麼看 - WG計算機</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7288600499250923" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="top">
+    <a href="./" class="home"><img src="icons/icon-192.png" alt="" class="logo" width="36" height="36"><h1>WG計算機</h1></a>
+  </header>
+
+  <main class="page">
+    <article class="card prose">
+      <h2>達成率與 PROJ：月底預估怎麼看</h2>
+      <p>PROJ（Projection）是「照目前的速度，月底會做到多少」的估計，達成率則是 PROJ 和目標的比值。這兩個數字很適合拿來快速判斷整個月的走勢，但它們都建立在一個簡單的假設上，解讀時要知道它的限制。</p>
+
+      <h3>PROJ 怎麼算</h3>
+      <pre><code>PROJ = MTD ÷ 已過天數 × 當月天數
+達成率 = PROJ ÷ Goal</code></pre>
+      <p>PROJ 假設接下來每天都維持目前的平均日業績，這種方法叫做線性推估。例如 7 月 20 日 MTD 為 60,000，平均每天 3,000，推估整個 7 月約 <strong>93,000</strong>；如果目標是 110,000，達成率約 <strong>84.55%</strong>。</p>
+
+      <h3>為什麼月初的 PROJ 常常不準</h3>
+      <p>線性推估最大的問題是樣本太少。假設 7 月 2 日 MTD 是 8,000，PROJ 會是 8,000 ÷ 2 × 31 = <strong>124,000</strong>，達成率高達 112.73%。但這只是兩天的資料，只要接下來幾天表現平平，PROJ 就會快速往下修。</p>
+      <p>大單也會造成類似的扭曲。7 月 5 日 MTD 25,000，其中有一筆 15,000 的單筆大單，PROJ 會是 <strong>155,000</strong>；如果把這筆不常發生的大單拿掉，其餘業績推估出來只有 10,000 ÷ 5 × 31 = <strong>62,000</strong>。兩個數字差了一倍以上，真實情況通常介於兩者之間。</p>
+
+      <h3>其他常見的誤差來源</h3>
+      <ul>
+        <li><strong>假日與工作天分布：</strong>如果月初剛好遇到連假，前幾天的平均會偏低，PROJ 也會被低估。</li>
+        <li><strong>月底衝刺：</strong>很多團隊的業績集中在月底，前半個月的 PROJ 自然會偏保守。</li>
+        <li><strong>季節性：</strong>旺季與淡季的平均日業績本來就不同，拿淡季的步調推估旺季月份並不準。</li>
+      </ul>
+
+      <h3>怎麼正確使用</h3>
+      <ol>
+        <li><strong>看趨勢，不看單日：</strong>每天記下 PROJ，觀察它是在往上還是往下走，比單看某一天的數字更有意義。</li>
+        <li><strong>月中以後再認真看：</strong>過了一半的天數，樣本夠多，PROJ 的參考價值才會明顯提高。</li>
+        <li><strong>搭配 DailyNeed：</strong>達成率低於 100% 時，看 DailyNeed 和目前日均的差距，就知道需要加速多少。</li>
+        <li><strong>把特殊大單分開看：</strong>遇到不常發生的大單，可以自己用扣掉大單後的 MTD 再算一次，得到比較保守的估計。</li>
+      </ol>
+
+      <h3>小結</h3>
+      <p>PROJ 和達成率是方向盤，不是終點線。它們告訴你「照這樣下去」會怎樣，而你每天的行動會改變這個「照這樣下去」。把它們當成調整步調的訊號，而不是對結果的保證，才能真正發揮作用。</p>
+
+      <p><a href="./">→ 用 WG計算機算算看</a> · <a href="guides.html">回到業績指南</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <nav><a href="/">首頁</a> · <a href="about.html">使用說明</a> · <a href="guides.html">業績指南</a> · <a href="/privacy.html">隱私權政策</a></nav>
+    <p>© KarzeWorks</p>
+  </footer>
+</body>
+</html>
